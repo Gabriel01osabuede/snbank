@@ -34,3 +34,13 @@ To test all of these functionality.
      
  (https://www.wikihow.com/Use-Windows-Command-Prompt-to-Run-a-Python-File)
  
+ **Accepted Staff Username And Password**
+ 
+ username = Andrew2020
+ password = Osabuede
+ 
+ or 
+ 
+ username = Emmanuel201
+ password = Classydude
+  
