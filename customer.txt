@@ -1,8 +1,0 @@
-Nosa Gabriel,1000000,First-money,nosa@gmail.com,4034821119,
-Efe Gabriel,2000000,First-money,efe@gmail.com,5838858491,
-Emma Gabriel,3000000,First-money,emma@gmail.com,3572983546,
-Osas Gabriel,4000000,First-money,osas@gmail.com,9025436728,
-Julius Agustine,2000,First-money,julius@gmail.com,8671652721,
-Naomi Lokosu,2000000,First-money,Naomi@gmail.com,8218346071,
-Andrey,1000000000,first_money,Andy@gmail.com,3664647063,
-Andy,1000000,First-money,Andy@gmail.com,2096942230,

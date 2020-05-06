@@ -1,6 +1,9 @@
+import sys
 import random
-print("Welcome To AnDRE Finance Bank\n1 Staff Login\n2 Close App")
+import os
+import time
 
+print("Welcome To AnDRE Finance Bank\n1 Staff Login\n2 Close App")
 
 def check():
     username = input("\nType In Your username : ")
@@ -21,27 +24,37 @@ def checkUSer(arr, user , passwd):
     while i < len(arr):
         if arr[i][0] == user and arr[i][1] == passwd:
             return staffPAge()
-            # return arr[i]
         i+=1
-    print("Does not exist")
+    print("\nUser does not exist")
 
 
 def menu():
-    while True:
-        try:
-            select = int(input("Select 1 or 2:  "))
+    try:
+        select = int(input("Select 1 or 2:  "))
+        while True:
             if select == 1:
                 check()
             elif select == 2:
-                print("Thank You For Banking With Us")
-                break
+                print("Thank You for Banking With Us.")
+                sys.exit()
             elif select != 1 and select != 2:
                 print("Invalid Selection")
-        except ValueError:
-            print("Invallid Entry\nTry Again")
+    except ValueError:
+        print("Invallid Entry\nTry Again")
 
+def createsessionfile():
+    with open("session.txt",'a+') as file:
+        data = file.write("Session created in : " + time.asctime(time.localtime(time.time())))
+
+def delsessionfile():
+    if os.path.exists("session.txt"):
+        os.remove("session.txt")
+        print("File deleted")
+    else:
+        print("The file does not exist")
 
 def staffPAge():
+    createsessionfile()
     try:
         while True:
             print("\n1 Create new bank account\n2 Check Account Details\n3 Logout")
@@ -51,9 +64,8 @@ def staffPAge():
             elif selection == 2:
                 AccountDetails()
             elif selection == 3:
+                delsessionfile()
                 menu()
-            elif selection != 1 and selection != 2 and selection != 3:
-                print('Wrong Selection.Try Again\n')
     except ValueError:
         print('Invalid Selection Try Again\n')
 
@@ -100,9 +112,5 @@ def checkArray1(arr, account):
             return arr[i]
         i+=1
     return "Does not exist";
-
-
-
-
 
 menu()
