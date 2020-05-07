@@ -30,7 +30,7 @@ def checkUSer(arr, user , passwd):
 
 def menu():
     try:
-        select = int(input("Select 1 or 2:  "))
+        select = int(input("\nWelcome to the login-page\nSelect 1 or 2:  "))
         while True:
             if select == 1:
                 check()
@@ -49,7 +49,6 @@ def createsessionfile():
 def delsessionfile():
     if os.path.exists("session.txt"):
         os.remove("session.txt")
-        print("File deleted")
     else:
         print("The file does not exist")
 
@@ -57,8 +56,8 @@ def staffPAge():
     createsessionfile()
     try:
         while True:
-            print("\n1 Create new bank account\n2 Check Account Details\n3 Logout")
-            selection = int(input('Enter Selection 1, 2 or 3 :  '))
+            print("\nStaff Page\n1 Create new bank account\n2 Check Account Details\n3 Logout")
+            selection = int(input('\nEnter Selection 1, 2 or 3 :  '))
             if selection == 1:
                 createBankAcc()
             elif selection == 2:
@@ -76,7 +75,7 @@ def writeMultipleToFileWithContent(filename, data):
 
 def createBankAcc():
     filename2 = "customer.txt"
-    print("Fill In The Right Details To Create New Account ")
+    print("\nNew Account\nFill In The Right Details To Create New Account ")
     Account_name = input("Account name = ")
     Opening_Balance = input("Opening Balance = ")
     Account_Type = input("Account Type = ")
